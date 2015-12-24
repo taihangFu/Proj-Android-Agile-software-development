@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#607D8B">
+    <RadioGroup
+        android:layout_marginLeft="10dp"
+        android:id="@+id/radioIncomeOrExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Income"
+            android:id="@+id/radioButtonIncome"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expense"
+            android:id="@+id/radioButtonExpense"
+            android:checked="false" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Name of Transaction"
+        android:id="@+id/textView12" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etNameOfTransaction"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Amount"
+        android:id="@+id/textView13" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etAmount"
+        android:inputType="numberDecimal|numberSigned"
+        android:hint="0"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Category"
+        android:id="@+id/textView15" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etCategory"
+        android:imeOptions="actionNext"
+        android:focusableInTouchMode="false"
+        android:singleLine="true"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Date"
+        android:id="@+id/textView14" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etDate"
+        android:focusableInTouchMode="false"
+        android:inputType="date"
+        android:layout_gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="111dp"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:id="@+id/btnEditTransaction"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="82dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/button9"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnEditTransaction" />
+    </RelativeLayout>
+</LinearLayout>

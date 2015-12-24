@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#607D8B"
+    >
+    <include android:id="@+id/app_bar"
+        layout="@layout/app_bar"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accept"
+            android:id="@+id/btnAccept"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/tvMessage"
+            android:layout_alignStart="@+id/tvMessage"
+            android:layout_marginTop="74dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reject"
+            android:id="@+id/btnReject"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="80dp"
+            android:layout_alignTop="@+id/btnAccept"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Do you want to accept?"
+            android:id="@+id/tvMessage"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="66dp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="#F3F3F3">
+
+    <!-- icon -->
+    <ImageView
+        android:id="@+id/single_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        />
+
+    <!-- Transection Name -->
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_toRightOf="@+id/single_icon"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#318CE7"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/transection" />
+
+    <!-- date -->
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#89CFF0"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+
+        android:layout_below="@+id/transection"
+        android:layout_alignLeft="@+id/transection"
+        />
+
+    <!-- amount -->
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        />
+
+</RelativeLayout>

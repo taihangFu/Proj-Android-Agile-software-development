@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="To reach your savings goal it will take"
+        android:id="@+id/textView20"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Result"
+        android:id="@+id/results"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textView20"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Savings:"
+        android:id="@+id/textView"
+        android:layout_below="@+id/results"
+        android:layout_alignLeft="@+id/textView20"
+        android:layout_alignStart="@+id/textView20"
+        android:layout_marginTop="25dp" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:maxLength="4"
+        android:ems="10"
+        android:id="@+id/savings"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignLeft="@+id/results"
+        android:layout_alignStart="@+id/results" />
+
+    <SeekBar
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/savings_bar"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginTop="20dp"
+        android:indeterminate="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Time:"
+        android:id="@+id/time"
+        android:layout_below="@+id/savings_bar"
+        android:layout_alignLeft="@+id/savings_bar"
+        android:layout_alignStart="@+id/savings_bar"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/months"
+        android:layout_alignBottom="@+id/time"
+        android:layout_alignLeft="@+id/savings"
+        android:layout_alignStart="@+id/savings" />
+
+    <SeekBar
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/months_bar"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/time"
+        android:layout_alignStart="@+id/time" />
+
+</RelativeLayout>

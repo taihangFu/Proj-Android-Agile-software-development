@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#607D8B"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="To reach your savings goal it will take:"
+        android:id="@+id/textView"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0 years, 1 month"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="28dp"
+        android:id="@+id/tvResult"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Savings Goal: $ "
+        android:id="@+id/textView19"
+        android:layout_alignBottom="@+id/etSavingGoal"
+        android:layout_toStartOf="@+id/etSavingGoal" />
+
+    <EditText
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:id="@+id/etSavingGoal"
+        android:text="1"
+        android:layout_marginEnd="49dp"
+        android:inputType="number"
+        android:gravity="center"
+        android:layout_below="@+id/tvResult"
+        android:layout_alignParentEnd="true"
+        />
+
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sbSaving"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="23dp"
+        android:layout_below="@+id/textView19"
+        android:layout_alignStart="@+id/textView19"
+        android:layout_alignEnd="@+id/etSavingGoal"
+        android:max="100000"
+        android:indeterminate="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Saving (PM): $ "
+        android:id="@+id/textView21"
+        android:layout_below="@+id/sbSaving"
+        android:layout_alignStart="@+id/sbSaving" />
+
+    <EditText
+        android:layout_width="60dip"
+        android:layout_height="wrap_content"
+        android:id="@+id/etSPM"
+        android:text="1"
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_alignBottom="@+id/textView21"
+        android:layout_alignEnd="@+id/sbSaving"
+        android:layout_toEndOf="@+id/etInterest" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sbSPM"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="23dp"
+        android:layout_below="@+id/textView21"
+        android:layout_alignStart="@+id/sbSaving"
+        android:layout_alignEnd="@+id/sbSaving"
+        android:indeterminate="false"
+        android:max="5000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Interest: "
+        android:id="@+id/textView24"
+        android:layout_below="@+id/sbSPM"
+        android:layout_alignStart="@+id/sbSPM" />
+
+    <EditText
+        android:layout_width="60dip"
+        android:layout_height="wrap_content"
+        android:id="@+id/etInterest"
+        android:text="0"
+        android:inputType="numberDecimal"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/textView24"
+        android:layout_toEndOf="@+id/textView24"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="%"
+        android:id="@+id/textView25"
+        android:layout_alignTop="@+id/textView24"
+        android:layout_toEndOf="@+id/textView19" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sbInterest"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/textView25"
+        android:layout_alignStart="@+id/sbSPM"
+        android:layout_alignEnd="@+id/sbSPM"
+        android:max="500"
+        android:indeterminate="false" />
+
+
+
+</RelativeLayout>

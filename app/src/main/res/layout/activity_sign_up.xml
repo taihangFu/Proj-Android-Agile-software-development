@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:gravity="center_horizontal"
+    android:orientation="vertical" android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" tools:context=".SignUp"
+    android:background="@drawable/login"
+    android:weightSum="1">
+
+    <!-- Header aligned to top -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center">
+
+
+        <!--  android:layout_alignTop="@+id/header" -->
+    </RelativeLayout>
+
+    <!-- Sign Up progress -->
+
+
+    <ScrollView android:id="@+id/login_form" android:layout_width="356dp"
+        android:layout_height="225dp"
+        android:fillViewport="false"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/header"
+        android:isScrollContainer="false">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout android:id="@+id/email_login_form" android:layout_width="match_parent"
+                android:layout_height="match_parent" android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:layout_weight="3.13"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/imageView"
+                    android:src="@drawable/pudget_white1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="50dp" />
+                <EditText
+                    android:layout_width="310dp"
+                    android:layout_height="40dp"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/name"
+                    android:layout_gravity="center_horizontal"
+                    android:hint="Name"
+                    android:gravity="center"
+                    android:background="@drawable/usernamee"
+                    android:layout_marginBottom="10dp" />
+
+                <EditText android:id="@+id/email"
+                    android:layout_width="310dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:typeface="monospace"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/email_line"
+                    android:layout_weight="0.07"
+                    android:layout_marginBottom="10dp" />
+
+                <EditText android:id="@+id/password"
+                    android:layout_width="310dp"
+                    android:layout_height="40dp"
+                    android:hint="Password"
+                    android:imeActionLabel="@string/action_sign_in_short"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:visibility="visible"
+                    android:autoText="false"
+                    android:editable="false"
+                    android:typeface="serif"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/passwordpanel"
+                    android:layout_weight="0.04" />
+
+                <Button
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/Button02"
+                    android:layout_width="250dp"
+                    android:layout_height="55dp"
+                    android:layout_below="@+id/signUp"
+                    android:typeface="sans"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/signupbutton">
+                </Button>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+

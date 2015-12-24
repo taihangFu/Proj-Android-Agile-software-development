@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">PudgetPlanner</string>
+
+    <string name="forget_password"><u>Forget Password</u></string>
+    <string name="saving_goals"><u>Saving Goals</u></string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login_successful">LoginSuccessful</string>
+    <string name="promt_password">Password</string>
+    <string name="promt_name">Name</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="plus_sign_out">Switch Google+ account</string>
+    <string name="plus_disconnect">Disconnect from Google+</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="drawer_close">Close</string>
+    <string name="drawer_open">Open</string>
+
+    <string-array name="tabs" >
+        <item>save</item>
+        <item>time</item>
+        <item>contributions</item>
+    </string-array>
+
+
+    <string name="title_activity_main">PudgetPlanner</string>
+    <string name="title_activity_pie_chart_summary">PieChartSummary</string>
+
+
+</resources>

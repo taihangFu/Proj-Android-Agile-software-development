@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="#F3F3F3">
+
+    <!-- icon -->
+    <ImageView
+        android:id="@+id/item_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        />
+
+    <!-- Account Name -->
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:textSize="17dp"
+        android:layout_toRightOf="@+id/item_icon"
+        android:layout_alignBaseline="@+id/balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="5dp"
+        android:textColor="#318CE7"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/accountName" />
+
+    <!-- accountType -->
+    <TextView
+        android:id="@+id/accountType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="TextView"
+        android:textColor="#89CFF0"
+        android:layout_below="@+id/accountName"
+        android:layout_alignLeft="@+id/accountName"
+        />
+
+    <!-- balance -->
+    <TextView
+        android:id="@+id/balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        />
+
+</RelativeLayout>

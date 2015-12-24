@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="comp4920.pudgetplanner" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!--
+      IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
+      to match your app's package name + ".permission.C2D_MESSAGE".
+    -->
+    <permission android:protectionLevel="signature"
+        android:name="comp4920.pudgetplanner.permission.C2D_MESSAGE" />
+    <uses-permission android:name="comp4920.pudgetplanner.permission.C2D_MESSAGE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme" >
+
+        <!-- suppress AndroidDomInspection -->
+        <activity
+            android:name=".Login"
+            android:label="@string/app_name"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginSuccessful"
+            android:label="Home" >
+        </activity>
+        <activity
+            android:name=".SignUp"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".SavingGoals"
+            android:label="Saving Goals Calculator" >
+        </activity>
+        <activity
+            android:name=".ChangePassword"
+            android:label="Change Password" >
+        </activity>
+        <activity
+            android:name=".PasswordRecovery"
+            android:label="Password Recovery" >
+        </activity>
+        <activity
+            android:name=".Account"
+            android:label="Account" >
+        </activity>
+        <activity
+            android:name=".AddAccount"
+            android:label="Add Account" >
+        </activity>
+        <activity
+            android:name=".SingleAccountView"
+            android:label="Account" >
+        </activity>
+        <activity
+            android:name=".AddIncomeExpense"
+            android:label="Add Income/Expense" >
+        </activity>
+        <activity
+            android:name=".EditAccount"
+            android:label="Edit Account" >
+        </activity>
+        <activity
+            android:name=".EditTransaction"
+            android:label="Edit Transaction" >
+        </activity>
+        <activity
+            android:name=".TransferTransaction"
+            android:label="Transfer Transaction" >
+        </activity>
+
+
+        <activity
+            android:name=".SearchPeople"
+            android:label="Add Users" >
+        </activity>
+
+        <activity
+            android:name=".SinglePersonView"
+            android:label="Send Invitation"
+            >
+        </activity>
+
+        <activity
+            android:name=".AcceptOrReject"
+            android:label="@string/app_name"
+            >
+        </activity>
+
+        <service android:name="com.parse.PushService" />
+        <receiver android:name="comp4920.pudgetplanner.Receiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!--
+                  IMPORTANT: Change "com.parse.starter" to match your app's package name.
+                -->
+                <category android:name="comp4920.pudgetplanner" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".PieChartSummary"
+            android:label="@string/title_activity_pie_chart_summary" >
+        </activity>
+    </application>
+
+</manifest>

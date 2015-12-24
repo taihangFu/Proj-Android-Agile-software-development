@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#607D8B"
+        android:weightSum="1">
+        <include android:id="@+id/app_bar"
+            layout="@layout/app_bar"
+            />
+        <RadioGroup
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:id="@+id/radioIncomeOrExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Income"
+                android:id="@+id/income"
+                android:checked="true"
+                android:textSize="20dp"
+                android:layout_below="@+id/app_bar"
+                android:layout_toEndOf="@+id/radioIncomeOrExpense" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expense"
+                android:id="@+id/expense"
+                android:checked="false"
+                android:textSize="20dp"
+                android:layout_below="@+id/app_bar"
+                android:layout_toEndOf="@+id/income" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_marginLeft="27dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Name of Transaction"
+            android:id="@+id/textView12"
+            android:textSize="20dp"
+            android:layout_below="@+id/radioIncomeOrExpense"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:id="@+id/etNameOfTransaction"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_above="@+id/etAmount"
+            android:layout_alignEnd="@+id/relativeLayout2" />
+
+        <TextView
+            android:layout_marginLeft="27dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Amount"
+            android:id="@+id/textView13"
+            android:textSize="20dp"
+            android:layout_alignTop="@+id/etAmount"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:id="@+id/etAmount"
+            android:inputType="numberDecimal|numberSigned"
+            android:hint="0"
+            android:layout_gravity="center_horizontal"
+            android:layout_above="@+id/etCategory"
+            android:layout_alignStart="@+id/etNameOfTransaction" />
+
+        <TextView
+            android:layout_marginLeft="27dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Category"
+            android:id="@+id/textView15"
+            android:textSize="20dp"
+            android:layout_alignTop="@+id/etCategory"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:id="@+id/etCategory"
+            android:imeOptions="actionNext"
+            android:focusableInTouchMode="false"
+            android:singleLine="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_above="@+id/relativeLayout2"
+            android:layout_alignStart="@+id/etAmount"
+            android:layout_marginBottom="61dp" />
+
+        <TextView
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Date"
+            android:id="@+id/textView14"
+            android:textSize="20dp"
+            android:layout_below="@+id/textView15"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:id="@+id/etDate"
+            android:inputType="date"
+            android:focusableInTouchMode="false"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignTop="@+id/textView14"
+            android:layout_alignStart="@+id/etCategory" />
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="68dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/relativeLayout2"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/radioIncomeOrExpense">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:id="@+id/btnAdd"
+                android:layout_gravity="center_horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="101dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:id="@+id/button6"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/btnAdd" />
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

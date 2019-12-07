@@ -1,4 +1,4 @@
-# Proj-Android-Agile-software-development
+# PudgetPlanner
 
 
 This Android app is called PudgetPlanner, it is a cloud based Budget App that provide budget calculators for saving goal and allowed user to create multiple budget accounts
